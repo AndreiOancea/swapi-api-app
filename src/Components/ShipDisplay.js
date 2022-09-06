@@ -1,13 +1,16 @@
 import React from 'react';
+import './ShipDisplay.css'
 
 const ShipDisplay = (props) => {
     return (
-        <div>
-            <div>
-                <h3>Name: {props.shipName}</h3>
-            </div>
-            <div>
-                <p><em>Class: {props.shipClass}</em></p>
+        <div className='ship_display-container'>
+            <div className='ship_display-heading'>
+                <div>
+                    <h2>{props.shipName}</h2>
+                </div>
+                <div>
+                    <p><em>Class: {props.shipClass}</em></p>
+                </div>
             </div>
             <div>
                 <p>Cost: {props.shipCost} Credits</p>

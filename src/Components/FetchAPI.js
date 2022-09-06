@@ -7,6 +7,11 @@ const FetchAPI = () => {
     const [shipInfo, setShipInfo] = useState(starShips);
     const [selectVal, setSelectVal] = useState(2);
 
+    // const imageArr = [
+    //     { id: 2, imgURL: 'https://i.pinimg.com/originals/43/54/d3/4354d36812bdd8049b6e4a0f1a34e3cc.jpg' },
+
+    // ]
+
     const getInfo = async (num) => {
         try {
             const data = await axios.get(`https://swapi.dev/api/starships/${num}/`);
@@ -29,8 +34,6 @@ const FetchAPI = () => {
         getInfo(selectVal);
     }
 
-    console.log(selectVal);
-
     return (
         <div>
             <form onSubmit={handleSubmit}>
@@ -39,14 +42,12 @@ const FetchAPI = () => {
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="5">5</option>
-                    <option value="7">7</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
                 </select>
                 <br />
                 <button type='submit'>Get Starship!</button>
             </form>
-            {/* {starShips.map(ship => {
-                <ShipDisplay />
-            })} */}
             <ShipDisplayList shipArr={shipInfo} />
         </div >
     )

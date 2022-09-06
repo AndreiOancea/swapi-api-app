@@ -12,6 +12,9 @@ const ShipDisplay = (props) => {
                     <p><em>Class: {props.shipClass}</em></p>
                 </div>
             </div>
+            <div className='ship_display-img'>
+                <img src={props.imageURL} />
+            </div>
             <div>
                 <p>Cost: {props.shipCost} Credits</p>
             </div>

@@ -5,20 +5,21 @@ import './ShipDisplayList.css'
 const ShipDisplayList = (props) => {
     return (
         <div>
-            <p>Ships:</p>
-            {props.shipArr.map((ship, index) => {
-                console.log(ship.name);
-                return (
-                    <div className='ship-list-container'>
+            <h1>Your Fleet</h1>
+            <div className='ship_list-container'>
+                {props.shipArr.map((ship, index) => {
+                    console.log(ship.name);
+                    return (
                         <ShipDisplay
                             key={index}
                             shipName={ship.name}
                             shipCost={ship.cost_in_credits}
                             shipClass={ship.starship_class}
+                            imageURL={ship.imageURL}
                         />
-                    </div>
-                )
-            })}
+                    )
+                })}
+            </div>
         </div>
     )
 }

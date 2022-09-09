@@ -1,10 +1,10 @@
-import FetchAPI from './Components/FetchAPI';
+import StarshipApp from './Components/StarshipApp';
 // import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <FetchAPI />
+      <StarshipApp />
     </div>
   );
 }
